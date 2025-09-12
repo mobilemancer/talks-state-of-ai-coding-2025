@@ -13,7 +13,11 @@ Create a **Centipede clone** in a **1980s neon arcade style**.
 * Use **HTML, vanilla JavaScript, and CSS**, with the **`<canvas>` element** for rendering.
 * Must run efficiently in a browser without external frameworks.
 * Show **player controls** (movement + shooting) as an **on-screen overlay**.
+* Show how to start the game in the **on-screen overlay**.
 * Include at least **10 distinct power-ups** (e.g., rapid fire, shields, extra life, slowdown, spread shot, etc.).
+* Power-ups are randomly generated from shooting centipede sections and mushrooms.
+* Power-ups are **colored and animated** to stand out, and can be **stacked**.
+* Power-ups are aquired when user shoots them.
 * When a power-up is collected:
 
   * Pause the game.
