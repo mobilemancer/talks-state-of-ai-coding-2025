@@ -1,0 +1,1 @@
+npx @openai/codex@latest
