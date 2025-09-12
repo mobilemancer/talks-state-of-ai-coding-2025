@@ -1,12 +1,4 @@
-# For the talk "State of AI coding (2025)"
-
-Prompt used for testing the different tools:
-
----
-
-## Prompt
-
-Create a **Centipede clone** in a **1980s neon arcade style**.
+# Create a **Centipede clone** in a **1980s neon arcade style**.
 
 **Requirements:**
 
@@ -20,8 +12,7 @@ Create a **Centipede clone** in a **1980s neon arcade style**.
 * Power-ups are aquired when user shoots them.
 * When a power-up is collected:
 
-  * Pause the game.
-  * Display a **modal overlay** describing what it does.
+  * Display a **modal overlay** describing what it does, for a short while, try not to block the view or disturb the players game experience.
   * Resume gameplay once the modal is closed.
 * Core gameplay should follow the **classic Centipede** loop:
 
@@ -34,5 +25,3 @@ Create a **Centipede clone** in a **1980s neon arcade style**.
 
 * A single runnable project with **HTML, JS, and CSS** files.
 * Code should be efficient, structured, and not commented.
-
----
