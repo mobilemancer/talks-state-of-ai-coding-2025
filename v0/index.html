@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centipede - 1980s Neon Arcade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div class="ui-overlay">
+            <div class="score-display">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="lives">Lives: <span id="lives">3</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+
+            <div class="controls-help">
+                <h3>Controls</h3>
+                <p>Arrow Keys: Move</p>
+                <p>Spacebar: Shoot</p>
+                <p>Enter: Start Game</p>
+            </div>
+        </div>
+
+        <div id="powerup-modal" class="powerup-modal hidden">
+            <div class="modal-content">
+                <h3 id="powerup-title"></h3>
+                <p id="powerup-description"></p>
+            </div>
+        </div>
+
+        <div id="game-over-modal" class="game-over-modal hidden">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+
+        <div id="start-screen" class="start-screen">
+            <h1>CENTIPEDE</h1>
+            <p>Press ENTER to Start</p>
+            <div class="neon-border"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

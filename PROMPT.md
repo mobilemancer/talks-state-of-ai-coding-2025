@@ -12,14 +12,18 @@
 * Power-ups are aquired when user shoots them.
 * When a power-up is collected:
 
-  * Display a **modal overlay** describing what it does, for a short while, try not to block the view or disturb the players game experience.
-  * Resume gameplay once the modal is closed.
+* Display a **modal overlay** describing what it does, for a short while, try not to block the view or disturb the players game experience.
+* Resume gameplay once the modal is closed.
 * Core gameplay should follow the **classic Centipede** loop:
 
   * Player at bottom, centipede winding down from the top.
   * Mushrooms as obstacles.
   * Segment splitting when shot.
   * Scoring and increasing difficulty.
+  * Game over when player is hit.
+  * Game over when centipede reaches bottom.
+  * Game over when player runs out of lives.
+  * If centipede is killed, spawn a new one snd increase difficulty.
 
 **Deliverables:**
 
