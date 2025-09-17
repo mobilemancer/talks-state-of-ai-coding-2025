@@ -16,7 +16,8 @@
 * Core gameplay should follow the **classic Centipede** loop:
   * Player at bottom, centipede winding down from the top.
   * Shooting a segment in the middle of the centipede splits it into two centipedes.
-  * Mushrooms as obstacles, centipede can not pass through mushrooms, player can not pass through mushrooms.
+  * Mushrooms are obstacles, centipede can not pass through mushrooms, player can not pass through mushrooms.
+  * Mushrooms are destroyed when shot.
   * Scoring and increasing difficulty.
   * Player loose a life when centipede reaches bottom, or when player is hit by centipede segment.
   * Game over when player runs out of lives.
