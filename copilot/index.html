@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Centipede</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud">
+            <div id="score">Score: <span id="scoreValue">0</span></div>
+            <div id="lives">Lives: <span id="livesValue">3</span></div>
+            <div id="level">Level: <span id="levelValue">1</span></div>
+        </div>
+        <div id="controls">
+            <div class="control-section">
+                <h3>Controls</h3>
+                <div>Arrow Keys: Move</div>
+                <div>Spacebar: Shoot</div>
+                <div>Enter: Start Game</div>
+            </div>
+            <div class="control-section">
+                <h3>Power-ups</h3>
+                <div>Shoot segments & mushrooms to collect!</div>
+            </div>
+        </div>
+        <div id="startScreen">
+            <h1>NEON CENTIPEDE</h1>
+            <p>Press ENTER to Start</p>
+        </div>
+        <div id="gameOverScreen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="finalScore">0</span></p>
+            <p>Press ENTER to Restart</p>
+        </div>
+        <div id="powerupModal" class="hidden">
+            <div class="modal-content">
+                <h3 id="powerupTitle"></h3>
+                <p id="powerupDescription"></p>
+            </div>
+        </div>
+        <div id="levelUpModal" class="hidden">
+            <div class="modal-content level-up">
+                <h3 id="levelUpTitle">LEVEL UP!</h3>
+                <p>Get ready for increased difficulty!</p>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
