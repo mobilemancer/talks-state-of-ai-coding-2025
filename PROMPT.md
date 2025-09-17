@@ -1,4 +1,4 @@
-# Create a **Centipede clone** in a **1980s neon arcade style**.
+# Create a **Centipede clone** in a **1980s neon arcade style**
 
 **Requirements:**
 
@@ -9,21 +9,18 @@
 * Include at least **10 distinct power-ups** (e.g., rapid fire, shields, extra life, slowdown, spread shot, etc.).
 * Power-ups are randomly generated from shooting centipede sections and mushrooms.
 * Power-ups are **colored and animated** to stand out, and can be **stacked**.
-* Power-ups are aquired when user shoots them.
+* Power-ups are aquired when user shoots them or when they touch the player.
 * When a power-up is collected:
-
-* Display a **modal overlay** describing what it does, for a short while, try not to block the view or disturb the players game experience.
-* Resume gameplay once the modal is closed.
+  * Display a **modal overlay** describing what it does, for a short while, try not to block the view or disturb the players game experience.
+  
 * Core gameplay should follow the **classic Centipede** loop:
-
   * Player at bottom, centipede winding down from the top.
-  * Mushrooms as obstacles.
-  * Segment splitting when shot.
+  * Shooting a segment in the middle of the centipede splits it into two centipedes.
+  * Mushrooms as obstacles, centipede can not pass through mushrooms, player can not pass through mushrooms.
   * Scoring and increasing difficulty.
-  * Game over when player is hit.
-  * Game over when centipede reaches bottom.
+  * Player loose a life when centipede reaches bottom, or when player is hit by centipede segment.
   * Game over when player runs out of lives.
-  * If centipede is killed, spawn a new one snd increase difficulty.
+  * If centipede is killed, spawn a new one, and increase difficulty.
 
 **Deliverables:**
 
