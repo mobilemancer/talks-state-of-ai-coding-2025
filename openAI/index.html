@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Neon Centipede</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="frame">
+<canvas id="game" width="480" height="640"></canvas>
+<div id="hud">
+<div class="brand">NEON CENTIPEDE</div>
+<div class="stats">
+<span id="score">000000</span>
+<span id="lives">❤❤❤</span>
+<span id="wave">WAVE 1</span>
+</div>
+</div>
+<div id="controls">
+<div class="howto">
+<div class="title">How to Play</div>
+<div class="steps">
+<span>Move: Arrow Keys / WASD</span>
+<span>Shoot: Space</span>
+<span>Start/Pause: Enter</span>
+</div>
+</div>
+<div class="buttons">
+<button id="btnUp">▲</button>
+<div class="lr">
+<button id="btnLeft">◀</button>
+<button id="btnFire">●</button>
+<button id="btnRight">▶</button>
+</div>
+<button id="btnDown">▼</button>
+</div>
+</div>
+<div id="powerModal" class="hidden">
+<div class="pm-card">
+<div class="pm-title">Power-Up!</div>
+<div id="pm-body"></div>
+</div>
+</div>
+<div id="startOverlay">
+<div class="panel">
+<div class="title neon">NEON CENTIPEDE</div>
+<div class="subtitle">1980s Neon Arcade</div>
+<ul class="list">
+<li>Move: Arrow Keys / WASD</li>
+<li>Shoot: Space</li>
+<li>Start/Pause: Enter</li>
+<li>Collect power-ups by shooting the glowing chips that drop from centipede segments and mushrooms.</li>
+</ul>
+<button id="startBtn">Start</button>
+</div>
+</div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
