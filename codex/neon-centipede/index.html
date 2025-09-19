@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Centipede Assault</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-glow"></div>
+<div class="ui-wrapper">
+<div class="hud">
+<div class="hud-item"><span>Score</span><strong id="score">0</strong></div>
+<div class="hud-item"><span>Lives</span><strong id="lives">3</strong></div>
+<div class="hud-item"><span>Level</span><strong id="level">1</strong></div>
+</div>
+<div id="status-banner" class="status-banner">Press Enter to Start</div>
+<div class="controls-overlay">
+<h1>Neon Centipede Assault</h1>
+<p class="control-line">Move: Arrow Keys or A / D</p>
+<p class="control-line">Shoot: Space or W / Up Arrow</p>
+<p class="control-line">Pause: P</p>
+<p class="control-line highlight">Press Enter to Start</p>
+</div>
+</div>
+<canvas id="game" width="768" height="960"></canvas>
+<div id="power-modal" class="power-modal hidden"></div>
+<script src="game.js"></script>
+</body>
+</html>
