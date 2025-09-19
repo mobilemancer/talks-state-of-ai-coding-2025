@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+margin: 0;
+background: radial-gradient(circle at center, #18004a 0%, #05000f 100%);
+font-family: 'Press Start 2P', monospace;
+color: #f5f5f5;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.neon-frame {
+position: relative;
+padding: 20px;
+box-shadow: 0 0 40px rgba(0, 255, 204, 0.4), inset 0 0 30px rgba(255, 0, 204, 0.2);
+border-radius: 18px;
+background: linear-gradient(135deg, rgba(17, 0, 40, 0.95), rgba(4, 0, 15, 0.95));
+}
+canvas {
+background: rgba(2, 0, 12, 0.85);
+border: 2px solid rgba(0, 255, 204, 0.6);
+box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+}
+.hud {
+position: absolute;
+top: 12px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 24px;
+font-size: 12px;
+text-shadow: 0 0 6px rgba(255, 0, 204, 0.8);
+}
+.controls-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+background: rgba(8, 0, 24, 0.75);
+padding: 24px 32px;
+border: 2px solid rgba(255, 0, 204, 0.7);
+box-shadow: 0 0 25px rgba(255, 0, 204, 0.4);
+border-radius: 12px;
+animation: pulse 2s infinite;
+}
+.controls-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 12px;
+margin-top: 16px;
+font-size: 10px;
+}
+.controls-grid div {
+display: flex;
+flex-direction: column;
+gap: 6px;
+align-items: center;
+}
+.key {
+display: inline-block;
+padding: 6px 10px;
+border: 1px solid rgba(0, 255, 204, 0.6);
+box-shadow: 0 0 12px rgba(0, 255, 204, 0.4);
+border-radius: 6px;
+font-size: 10px;
+}
+.powerup-modal {
+position: absolute;
+left: 50%;
+bottom: 24px;
+transform: translateX(-50%);
+background: rgba(0, 0, 0, 0.6);
+padding: 16px 24px;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+text-align: center;
+transition: opacity 0.3s ease;
+width: 420px;
+max-width: 90vw;
+}
+.powerup-modal.hidden {
+opacity: 0;
+pointer-events: none;
+}
+.powerup-modal .modal-content {
+font-size: 12px;
+}
+.powerup-modal h2 {
+margin: 0 0 8px;
+font-size: 14px;
+color: #00ffea;
+}
+.powerup-modal p {
+margin: 0;
+color: #f0e6ff;
+}
+@keyframes pulse {
+0%, 100% { box-shadow: 0 0 25px rgba(255, 0, 204, 0.2); }
+50% { box-shadow: 0 0 40px rgba(0, 255, 204, 0.4); }
+}
+.hidden {
+display: none;
+}
+.fade {
+opacity: 0;
+}
