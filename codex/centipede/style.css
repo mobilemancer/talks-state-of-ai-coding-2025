@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#05000f;color:#f6f7ff;font-family:'Orbitron',sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.game-wrapper{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px}
+canvas{background:radial-gradient(circle at center,#0d0221 0%,#04000d 70%,#000 100%);border:4px solid #f72585;box-shadow:0 0 40px rgba(247,37,133,.7),0 0 120px rgba(69,123,157,.5);border-radius:16px}
+.hud{width:100%;display:flex;justify-content:space-between;gap:24px}
+.scoreboard{display:flex;gap:16px;font-size:18px;text-shadow:0 0 8px #00f5d4;color:#00f5d4}
+.control-overlay{background:rgba(13,2,33,.7);border:2px solid #7209b7;box-shadow:0 0 16px rgba(114,9,183,.8);padding:12px 18px;border-radius:12px;color:#f1f1ff}
+.control-overlay h2{text-transform:uppercase;font-size:18px;margin-bottom:6px;color:#ffbe0b}
+.control-overlay p{font-size:14px;line-height:1.4}
+.start-hint{color:#00f5d4}
+.start-overlay{position:absolute;inset:0;background:rgba(5,0,15,.9);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:20px;color:#fff;font-size:20px;letter-spacing:1px;z-index:3;animation:pulse 2.5s infinite}
+.start-overlay h1{font-size:48px;color:#f72585;text-shadow:0 0 20px rgba(247,37,133,.8)}
+.power-modal{position:absolute;top:20px;left:50%;transform:translateX(-50%);background:rgba(247,37,133,.9);padding:12px 24px;border-radius:999px;color:#fff;font-weight:600;font-size:16px;box-shadow:0 0 20px rgba(247,37,133,.6);z-index:4;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;white-space:nowrap}
+.power-modal.show{opacity:1;transform:translate(-50%,0)}
+.power-modal.hidden{display:none}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(247,37,133,.4)}50%{box-shadow:0 0 40px rgba(255,190,11,.6)}}
+.powerup-orb{position:absolute;width:24px;height:24px;border-radius:50%;filter:drop-shadow(0 0 12px rgba(255,255,255,.8));animation:orbspin 1.2s linear infinite}
+@keyframes orbspin{0%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.2) rotate(180deg)}100%{transform:scale(1) rotate(360deg)}}
