@@ -1,0 +1,190 @@
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+background: radial-gradient(circle at top, #220033, #050009 60%);
+color: #f6f6ff;
+font-family: 'Orbitron', 'Segoe UI', sans-serif;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: repeating-linear-gradient(0deg, rgba(0,255,255,0.08) 0, rgba(0,255,255,0.08) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(255,0,255,0.08) 0, rgba(255,0,255,0.08) 1px, transparent 1px, transparent 40px);
+filter: blur(0.3px);
+z-index: -2;
+}
+canvas {
+width: 640px;
+height: 800px;
+max-width: 95vw;
+max-height: 90vh;
+background: rgba(4,0,12,0.85);
+border: 3px solid rgba(0,255,255,0.6);
+box-shadow: 0 0 30px rgba(0,255,255,0.3), inset 0 0 40px rgba(255,0,255,0.2);
+}
+.hud {
+position: fixed;
+top: 20px;
+right: 20px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+z-index: 5;
+}
+.hud-section {
+background: rgba(4,0,20,0.6);
+padding: 10px 16px;
+border: 1px solid rgba(0,255,255,0.4);
+box-shadow: 0 0 15px rgba(255,0,128,0.4);
+border-radius: 4px;
+}
+.control-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: min(480px, 90vw);
+padding: 32px;
+background: rgba(10,0,30,0.92);
+border: 2px solid rgba(255,0,255,0.6);
+box-shadow: 0 0 40px rgba(0,255,255,0.35);
+text-align: center;
+z-index: 6;
+backdrop-filter: blur(6px);
+}
+.control-overlay.hidden {
+display: none;
+}
+.control-overlay h1 {
+margin: 0 0 8px;
+font-size: 32px;
+letter-spacing: 0.2em;
+text-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+.tagline {
+margin: 0 0 24px;
+font-size: 13px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #8ee7ff;
+}
+.controls {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 16px;
+margin-bottom: 24px;
+}
+.control {
+background: rgba(255,0,255,0.08);
+padding: 12px;
+border-radius: 4px;
+box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+.key {
+display: block;
+font-size: 18px;
+letter-spacing: 0.2em;
+color: #fff56f;
+}
+.description {
+font-size: 12px;
+letter-spacing: 0.1em;
+color: #c3f6ff;
+}
+#startButton {
+margin-top: 10px;
+padding: 12px 32px;
+font-size: 16px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #0b0614;
+background: linear-gradient(90deg, #14f1ff, #ff3df4);
+border: none;
+border-radius: 3px;
+box-shadow: 0 0 15px rgba(0,255,255,0.4);
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+#startButton:hover {
+transform: translateY(-2px);
+}
+.hint {
+margin-top: 18px;
+font-size: 12px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: #8ee7ff;
+}
+.power-modal {
+position: absolute;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(5,0,24,0.85);
+border: 1px solid rgba(255,255,255,0.3);
+box-shadow: 0 0 20px rgba(0,255,255,0.3);
+min-width: 280px;
+padding: 16px 24px;
+z-index: 7;
+opacity: 1;
+transition: opacity 0.3s ease;
+}
+.power-modal.hidden {
+display: none;
+}
+.power-modal-content h2 {
+margin: 0;
+font-size: 18px;
+letter-spacing: 0.2em;
+color: #ff9afc;
+}
+.power-modal-content p {
+margin: 8px 0 0;
+font-size: 13px;
+letter-spacing: 0.1em;
+color: #9ff7ff;
+}
+@keyframes pulse {
+0% { transform: scale(1); box-shadow: 0 0 6px rgba(255,255,255,0.4); }
+50% { transform: scale(1.2); box-shadow: 0 0 20px rgba(255,255,255,0.9); }
+100% { transform: scale(1); box-shadow: 0 0 6px rgba(255,255,255,0.4); }
+}
+.control-hud {
+position: fixed;
+left: 20px;
+bottom: 20px;
+background: rgba(8,0,24,0.8);
+border: 1px solid rgba(255,0,255,0.4);
+box-shadow: 0 0 18px rgba(0,255,255,0.25);
+padding: 14px 20px;
+backdrop-filter: blur(4px);
+text-transform: uppercase;
+letter-spacing: 0.18em;
+font-size: 11px;
+z-index: 4;
+}
+.control-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 6px 0;
+color: #c8f6ff;
+}
+.hud-key {
+color: #fff56f;
+margin-right: 12px;
+}
+.hud-desc {
+color: #8ee7ff;
+}
