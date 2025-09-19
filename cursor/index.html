@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neon Centipede</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+
+    <div id="hud">
+      <div class="hud-left">
+        <div class="hud-item" id="score">Score: 0</div>
+        <div class="hud-item" id="level">Level: 1</div>
+      </div>
+      <div class="hud-right">
+        <div class="hud-item" id="lives">Lives: 3</div>
+        <div class="hud-item" id="status"></div>
+      </div>
+    </div>
+
+    <div id="controls" class="panel">
+      <div class="title">Controls</div>
+      <div class="row"><span>Move</span><span>WASD / Arrow Keys</span></div>
+      <div class="row"><span>Shoot</span><span>Space</span></div>
+      <div class="row"><span>Start</span><span>Enter</span></div>
+    </div>
+
+    <div id="start" class="panel start">
+      <div class="title big">Neon Centipede</div>
+      <div class="subtitle">Press Enter to Start</div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content" id="modal-text"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
+
