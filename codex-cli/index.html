@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Centipede</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-glow"></div>
+<div class="ui-layer">
+<div id="title">Neon Centipede</div>
+<div id="controls">
+<div class="label">Controls</div>
+<div class="control-row"><span>Move</span><span>Arrow Keys or WASD</span></div>
+<div class="control-row"><span>Shoot</span><span>Space</span></div>
+<div class="control-row"><span>Start</span><span>Enter</span></div>
+</div>
+<div id="hud">
+<div id="score">Score: 0</div>
+<div id="lives">Lives: 3</div>
+<div id="level">Level: 1</div>
+<div id="powerup-list"></div>
+</div>
+<div id="status-banner"></div>
+</div>
+<canvas id="game-canvas" width="800" height="600"></canvas>
+<div id="powerup-modal"></div>
+<script src="game.js"></script>
+</body>
+</html>

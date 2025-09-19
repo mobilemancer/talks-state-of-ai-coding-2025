@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a0033, #000011);
+    font-family: 'Orbitron', monospace;
+    color: #00ffff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    position: relative;
+    border: 3px solid #ff00ff;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 20px #ff00ff,
+        inset 0 0 20px rgba(255, 0, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#gameCanvas {
+    display: block;
+    background: linear-gradient(45deg, #000033, #001122);
+    border-radius: 7px;
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.score-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.score, .lives, .level {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.controls-help {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 1px solid #ffff00;
+    border-radius: 5px;
+    font-size: 12px;
+    text-shadow: 0 0 5px #ffff00;
+}
+
+.controls-help h3 {
+    color: #ffff00;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.power-ups-display {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.power-ups-display h3 {
+    color: #00ff00;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+#activePowerUps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.power-up-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.start-screen, .game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+.start-screen h1 {
+    font-size: 4em;
+    color: #ff00ff;
+    text-shadow: 0 0 30px #ff00ff;
+    margin-bottom: 10px;
+    animation: neonPulse 2s infinite alternate;
+}
+
+.start-screen h2 {
+    font-size: 2em;
+    color: #00ffff;
+    text-shadow: 0 0 20px #00ffff;
+    margin-bottom: 30px;
+}
+
+.start-screen p, .game-over p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.game-over h2 {
+    font-size: 3em;
+    color: #ff0000;
+    text-shadow: 0 0 30px #ff0000;
+    margin-bottom: 20px;
+}
+
+.power-up-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px #00ff00;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-content h3 {
+    color: #00ff00;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.modal-content p {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 30px #ff00ff; }
+    100% { text-shadow: 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
+}
+
+@keyframes modalFadeIn {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px currentColor; }
+    50% { box-shadow: 0 0 20px currentColor; }
+}

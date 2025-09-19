@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centipede - Neon Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="ui-overlay">
+            <div class="score-display">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="lives">Lives: <span id="lives">3</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+            
+            <div class="controls-help">
+                <h3>Controls</h3>
+                <p>Arrow Keys: Move</p>
+                <p>Spacebar: Shoot</p>
+                <p>Enter: Start Game</p>
+            </div>
+            
+            <div class="power-ups-display">
+                <h3>Active Power-ups</h3>
+                <div id="activePowerUps"></div>
+            </div>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over hidden">
+            <h2>Game Over</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Press Enter to Play Again</p>
+        </div>
+        
+        <div id="startScreen" class="start-screen">
+            <h1>CENTIPEDE</h1>
+            <h2>Neon Arcade</h2>
+            <p>Destroy the centipede before it reaches the bottom!</p>
+            <p>Collect power-ups for special abilities!</p>
+            <p>Press Enter to Start</p>
+        </div>
+        
+        <div id="powerUpModal" class="power-up-modal hidden">
+            <div class="modal-content">
+                <h3 id="powerUpName"></h3>
+                <p id="powerUpDescription"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
